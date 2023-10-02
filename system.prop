@@ -4,7 +4,6 @@ ro.product.hardware=sp9832e_1h10_go
 ro.vendor.wcn.hardware.product=sharkle
 ro.vendor.wcn.hardware.etcpath=/vendor/etc
 eguarantee.device.brand=itel
-eguarantee.device.dh=Waterworld
 eguarantee.device.fw=RU-V021-20230214
 eguarantee.device.model=L6006
 
