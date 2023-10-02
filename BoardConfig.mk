@@ -27,9 +27,6 @@ TARGET_NO_BOOTLOADER := true
 # Platform
 TARGET_BOARD_PLATFORM := sp9832e
 
-# GPU
-TARGET_GPU_PLATFORM := rogue
-
 #SPRD: set property overrides split
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 
