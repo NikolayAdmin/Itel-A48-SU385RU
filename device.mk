@@ -3,7 +3,7 @@
 # Copyright (C) 2023 The TWRP Open Source Project
 #
 
-LOCAL_PATH := device/bqru/BQru_5745L
+LOCAL_PATH := device/itel/L6006
 
 # use PRODUCT_SHIPPING_API_LEVEL indicates the first api level,and contorl treble macro
 PRODUCT_SHIPPING_API_LEVEL := 29
@@ -12,7 +12,7 @@ PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
 BOARD_VNDK_VERSION := current
 
 #For Dynamic Partitions feature
-PRODUCT_USE_DYNAMIC_PARTITIONS :=true
+PRODUCT_USE_DYNAMIC_PARTITIONS :=false
 
 # add vndk version
 PRODUCT_PROPERTY_OVERRIDES += \
