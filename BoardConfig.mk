@@ -27,6 +27,8 @@ TARGET_NO_BOOTLOADER := true
 # Platform
 TARGET_BOARD_PLATFORM := sp9832e
 
+TARGET_GPU_PLATFORM := midgard
+
 #SPRD: set property overrides split
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 
