@@ -3,7 +3,7 @@
 # Copyright (C) 2023 The TWRP Open Source Project
 #
 
-DEVICE_PATH := device/bqru/BQru_5745L
+DEVICE_PATH := device/Itel/L6006
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
@@ -21,11 +21,11 @@ ARCH_ARM_HAVE_TLS_REGISTER := true
 TARGET_USES_64_BIT_BINDER := true
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := sp9863a_1h10_32b
+TARGET_BOOTLOADER_BOARD_NAME := sp9832e_1h10_32b
 TARGET_NO_BOOTLOADER := true
 
 # Platform
-TARGET_BOARD_PLATFORM := sp9863a
+TARGET_BOARD_PLATFORM := sp9832e
 
 # GPU
 TARGET_GPU_PLATFORM := rogue
@@ -36,10 +36,10 @@ BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 BUILD_BROKEN_DUP_RULES := true
 
 #boark NAME
-#BOARD_NAME := sharkl3
+#BOARD_NAME := sharkle
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := BQru-5745L
+TARGET_OTA_ASSERT_DEVICE := L6006
 
 # Kernel
 #BOARD_KERNEL_CMDLINE := earlycon=sprd_serial,0x70100000,115200n8 console=ttyS1,115200n8 loglevel=1 init=/init root=/dev/ram0 rw androidboot.hardware=s9863a1h10_go_32b androidboot.dtbo_idx=0 printk.devkmsg=on androidboot.boot_devices=soc/soc:ap-ahb/20600000.sdio
@@ -49,7 +49,7 @@ TARGET_OTA_ASSERT_DEVICE := BQru-5745L
 #BOARD_KERNEL_CMDLINE += init=/init
 #BOARD_KERNEL_CMDLINE += root=/dev/ram0
 #BOARD_KERNEL_CMDLINE += rw
-#BOARD_KERNEL_CMDLINE += androidboot.hardware=s9863a1h10_go_32b
+#BOARD_KERNEL_CMDLINE += androidboot.hardware=s9832e1h10_go_32b
 #BOARD_KERNEL_CMDLINE += androidboot.dtbo_idx=0
 #BOARD_KERNEL_CMDLINE += printk.devkmsg=on
 #BOARD_KERNEL_CMDLINE += androidboot.boot_devices=soc/soc:ap-ahb/20600000.sdio
@@ -76,9 +76,9 @@ TARGET_KERNEL_HEADER_ARCH := arm
 
 # File systems
 BOARD_HAS_LARGE_FILESYSTEM := true
-BOARD_BOOTIMAGE_PARTITION_SIZE := 41943040
+BOARD_BOOTIMAGE_PARTITION_SIZE := 36700160
 
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 41943040
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 36700160
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_SYSTEMIMAGE_PARTITION_TYPE := ext4
 BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := ext4
