@@ -5,13 +5,11 @@ ro.vendor.wcn.hardware.product=sharkle
 ro.vendor.wcn.hardware.etcpath=/vendor/etc
 eguarantee.device.brand=itel
 eguarantee.device.dh=Waterworld
-eguarantee.device.fw=BQ-5745L_9863_20201204
+eguarantee.device.fw=RU-V021-20230214
 eguarantee.device.model=L6006
 
 # from device/sprd/sharkle/sp9832e_1h10_go/system.prop
 ro.custom.build.version=RU-V021-20230214
-ro.build.realversion=FS170_TRX_L5703_63F_20201204_VOLTE_W1_8_L1_3_7_20_38_CTP_UDC_165133
-ro.build.nv_prj=_W1_8_L1_3_7_20_38
 ro.vendor.product.partitionpath=/dev/block/platform/soc/soc:ap-ahb/20600000.sdio/by-name/
 ro.vendor.keybox.id.value=NO_CHECK
 ro.vendor.ko.mount.point=/mnt/vendor
