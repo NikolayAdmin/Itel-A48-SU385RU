@@ -3,7 +3,7 @@
 # Copyright (C) 2023 The TWRP Open Source Project
 #
 
-DEVICE_PATH := device/Itel/L6006
+DEVICE_PATH := device/itel/L6006
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
@@ -102,7 +102,7 @@ BOARD_GROUP_UNISOC_SIZE := 4299161600
 BOARD_GROUP_UNISOC_PARTITION_LIST := system vendor product
 
 # Init
-TARGET_INIT_VENDOR_LIB := libinit_BQ-5745L
+TARGET_INIT_VENDOR_LIB := libinit_
 TARGET_RECOVERY_DEVICE_MODULES := libinit_BQ-5745L
 
 # Crypto
