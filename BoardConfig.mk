@@ -5,8 +5,18 @@
 
 DEVICE_PATH := device/itel/L6006
 
-# For building with minimal manifest
-ALLOW_MISSING_DEPENDENCIES := true
+# Additional binaries & libraries needed for recovery
+TARGET_RECOVERY_DEVICE_MODULES += \
+    libkeymaster4 \
+    libpuresoftkeymasterdevice \
+    ashmemd_aidl_interface-cpp \
+    libashmemd_client
+
+TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster4.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libpuresoftkeymasterdevice.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/ashmemd_aidl_interface-cpp.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libashmemd_client.so
 
 # Architecture
 ARCH_ARM_HAVE_TLS_REGISTER := true
@@ -31,6 +41,18 @@ TARGET_NO_BOOTLOADER := true
 #creates the metadata directory
 BOARD_USES_METADATA_PARTITION := true
 
+# Crypto
+#TW_INCLUDE_CRYPTO := false
+TW_INCLUDE_CRYPTO := true
+TW_INCLUDE_CRYPTO_FBE := true
+#TW_INCLUDE_FBE_METADATA_DECRYPT := true
+
+# Display
+TW_NO_SCREEN_TIMEOUT := true
+TW_MAX_BRIGHTNESS := 255
+TW_DEFAULT_BRIGHTNESS := 190
+TW_BRIGHTNESS_PATH := "/sys/devices/platform/sprd_backlight/backlight/sprd_backlight/brightness"
+
 # File systems
 BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_BOOTIMAGE_PARTITION_SIZE := 36700160
@@ -41,6 +63,24 @@ BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_USERIMAGES_USE_EXT4 := true
 #TARGET_USERIMAGES_USE_F2FS := true
+
+# For building with minimal manifest
+ALLOW_MISSING_DEPENDENCIES := true
+
+# For debugging
+TWRP_INCLUDE_LOGCAT := true
+TARGET_USES_LOGD := true
+
+#for dynamic partitions feature
+BOARD_BUILD_SUPER_IMAGE_BY_DEFAULT := true
+BOARD_SUPER_PARTITION_SIZE := 2621440000
+BOARD_SUPER_PARTITION_GROUPS := group_unisoc
+BOARD_GROUP_UNISOC_SIZE := 2621440000
+BOARD_GROUP_UNISOC_PARTITION_LIST := system vendor product
+
+# Init
+TARGET_INIT_VENDOR_LIB := libinit_L6006
+TARGET_RECOVERY_DEVICE_MODULES := libinit_L6006
 
 # Kernel
 #BOARD_KERNEL_CMDLINE := earlycon=sprd_serial,0x70100000,115200n8 console=ttyS1,115200n8 loglevel=1 init=/init root=/dev/ram0 rw androidboot.hardware=s9863a1h10_go_32b androidboot.dtbo_idx=0 printk.devkmsg=on androidboot.boot_devices=soc/soc:ap-ahb/20600000.sdio
@@ -81,33 +121,35 @@ TARGET_KERNEL_HEADER_ARCH := arm
 TARGET_BOARD_PLATFORM := sp9832e
 TARGET_GPU_PLATFORM := midgard
 
+# Properties
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
+
+# Recovery
+TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
+RECOVERY_SDCARD_ON_DATA := true
+BOARD_HAS_NO_SELECT_BUTTON := true
+
+# Resolution
+TW_THEME := portrait_hdpi
+DEVICE_SCREEN_WIDTH := 720
+DEVICE_SCREEN_HEIGHT := 1560
+
 #SPRD: set property overrides split
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 BUILD_BROKEN_DUP_RULES := true
-
-# Workaround for error copying vendor files to recovery ramdisk
-TARGET_COPY_OUT_VENDOR := vendor
 
 # System as root
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 BOARD_SUPPRESS_SECURE_ERASE := true
 
-#for dynamic partitions feature
-BOARD_BUILD_SUPER_IMAGE_BY_DEFAULT := true
-BOARD_SUPER_PARTITION_SIZE := 2621440000
-BOARD_SUPER_PARTITION_GROUPS := group_unisoc
-BOARD_GROUP_UNISOC_SIZE := 2621440000
-BOARD_GROUP_UNISOC_PARTITION_LIST := system vendor product
+# Workaround for error copying vendor files to recovery ramdisk
+TARGET_COPY_OUT_VENDOR := vendor
 
-# Init
-TARGET_INIT_VENDOR_LIB := libinit_L6006
-TARGET_RECOVERY_DEVICE_MODULES := libinit_L6006
 
-# Crypto
-#TW_INCLUDE_CRYPTO := false
-TW_INCLUDE_CRYPTO := true
-TW_INCLUDE_CRYPTO_FBE := true
-#TW_INCLUDE_FBE_METADATA_DECRYPT := true
+
+
+
 
 # Hack: prevent anti rollback
 #PLATFORM_VERSION := 16.1.0
@@ -119,31 +161,11 @@ PLATFORM_SECURITY_PATCH := 2023-02-01
 VENDOR_SECURITY_PATCH := 2023-02-01
 
 
-# Additional binaries & libraries needed for recovery
-TARGET_RECOVERY_DEVICE_MODULES += \
-    libkeymaster4 \
-    libpuresoftkeymasterdevice \
-    ashmemd_aidl_interface-cpp \
-    libashmemd_client
 
-TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster4.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libpuresoftkeymasterdevice.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/ashmemd_aidl_interface-cpp.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libashmemd_client.so
 
-# Recovery
-TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
-RECOVERY_GRAPHICS_USE_LINELENGTH := true
-RECOVERY_SDCARD_ON_DATA := true
-BOARD_HAS_NO_SELECT_BUTTON := true
 
-# Properties
-TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
-# For debugging
-TWRP_INCLUDE_LOGCAT := true
-TARGET_USES_LOGD := true
+
 
 # Excludes
 TW_EXCLUDE_TWRPAPP := true
@@ -164,16 +186,9 @@ TW_NO_SCREEN_BLANK := true
 # Use mke2fs to create ext4 images
 TARGET_USES_MKE2FS := true
 
-# Resolution
-TW_THEME := portrait_hdpi
-DEVICE_SCREEN_WIDTH := 720
-DEVICE_SCREEN_HEIGHT := 1560
 
-# Display
-TW_NO_SCREEN_TIMEOUT := true
-TW_MAX_BRIGHTNESS := 255
-TW_DEFAULT_BRIGHTNESS := 190
-TW_BRIGHTNESS_PATH := "/sys/devices/platform/sprd_backlight/backlight/sprd_backlight/brightness"
+
+
 
 # ?? Need confirm
 #HAVE_SELINUX := true
