@@ -75,7 +75,3 @@ PRODUCT_PACKAGES += \
    SoterService \
    libsoter_trusty \
    vendor.sprd.hardware.soter@1.0-service
-
-
-# TRUSTY_SEPOLICY_DIR :=vendor/sprd/proprietories-source/sprdtrusty/vendor/sprd/modules/common/sepolicy_androidq
-# BOARD_SEPOLICY_DIRS += $(TRUSTY_SEPOLICY_DIR)
