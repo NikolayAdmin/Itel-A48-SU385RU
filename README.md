@@ -1,6 +1,6 @@
-# TWRP device tree for BQru BQ-5745L (BQru-5745L)
+# TWRP device tree for Itel A48 (L6006)
 
-## Device specification
+# Device specification
 
 Basic   | Spec Sheet
 -------:|:------------------------
@@ -16,4 +16,4 @@ Display | 720 x 1560 pixels
 Rear Camera  | 5 MP
 Front Camera | 5 MP
 
-![Device Picture](https://www.yandex.ru/images/touch/search?img_url=https://gadgetpage.ru/uploads/posts/2021-11/1637506488_1.jpg&lr=39&p=1&pos=11&rpt=simage&source=tabbar&text=Itel A48)
+![Device Picture](https://www.ozon.ru/product/242248354/?oos_search=false)
