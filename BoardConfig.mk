@@ -13,6 +13,15 @@ TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster4.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libpuresoftkeymasterdevice.so \
 
+# Android Verified Boot
+BOARD_AVB_ENABLE := true
+BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
+BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --set_hashtree_disabled_flag
+BOARD_AVB_RECOVERY_ALGORITHM := SHA256_RSA4096
+BOARD_AVB_RECOVERY_KEY_PATH := external/avb/test/data/testkey_rsa4096.pem
+BOARD_AVB_RECOVERY_ROLLBACK_INDEX := 0
+BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 0
+
 # Architecture
 ARCH_ARM_HAVE_TLS_REGISTER := true
 TARGET_ARCH := arm
@@ -171,15 +180,6 @@ TARGET_USES_MKE2FS := true
 
 # Vendor modules loading
 TW_LOAD_VENDOR_MODULES := "tlsc6x_ts.ko"
-
-# Verified Boot
-BOARD_AVB_ENABLE := true
-BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
-BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --set_hashtree_disabled_flag
-BOARD_AVB_RECOVERY_ALGORITHM := SHA256_RSA4096
-BOARD_AVB_RECOVERY_KEY_PATH := external/avb/test/data/testkey_rsa4096.pem
-BOARD_AVB_RECOVERY_ROLLBACK_INDEX := 1
-BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
 
 # Workaround for error copying vendor files to recovery ramdisk
 TARGET_COPY_OUT_VENDOR := vendor
