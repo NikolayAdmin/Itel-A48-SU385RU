@@ -4,16 +4,14 @@
 
 Basic   | Spec Sheet
 -------:|:------------------------
-CPU     | Quad-core 1.4 GHz
+Android Version | 10.0
+Battery | 3000 mAh
 CHIPSET | Unisoc SC9832e
-GPU     | Mali-T820
-Memory  | 2GB
-Shipped Android Version | 10.0
-Storage | 32GB
-Battery | Li-Ion 3000 mAh
+CPU     | Quad-core 1.4 GHz
 Dimensions | 156 x 77.8 x 9.46 mm
 Display | 720 x 1560 pixels
-Rear Camera  | 5 MP
 Front Camera | 5 MP
-
-![Device Picture](https://www.ozon.ru/product/242248354/?oos_search=false)
+GPU     | Mali-T820
+Memory  | 2GB
+Rear Camera  | 5 MP
+Storage | 32GB
