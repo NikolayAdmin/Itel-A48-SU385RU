@@ -140,6 +140,9 @@ VENDOR_SECURITY_PATCH := 2020-12-05
 # Show build time on the splash screen
 TW_DEVICE_VERSION=$(shell date '+%Y%m%d') by Samurai
 
+# SPRD hardware
+BOARD_USES_SPRD_HARDWARE := true
+
 #SPRD: set property overrides split
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 BUILD_BROKEN_DUP_RULES := true
