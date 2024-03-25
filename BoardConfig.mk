@@ -2,7 +2,6 @@ DEVICE_PATH := device/itel/L6006
 
 # Android Verified Boot
 BOARD_AVB_ENABLE := true
-BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --set_hashtree_disabled_flag
 BOARD_AVB_RECOVERY_ALGORITHM := SHA256_RSA4096
 BOARD_AVB_RECOVERY_KEY_PATH := external/avb/test/data/testkey_rsa4096.pem
@@ -24,7 +23,7 @@ TARGET_BOOTLOADER_BOARD_NAME := sp9832e_1h10_32b
 TARGET_NO_BOOTLOADER := true
 TARGET_USES_UEFI := true
 
-#creates the metadata directory
+# Creates the metadata directory
 BOARD_USES_METADATA_PARTITION := true
 
 # Crypto
@@ -65,7 +64,7 @@ ALLOW_MISSING_DEPENDENCIES := true
 TARGET_USES_LOGD := true
 TWRP_INCLUDE_LOGCAT := true
 
-#for dynamic partitions feature
+# For dynamic partitions feature
 BOARD_BUILD_SUPER_IMAGE_BY_DEFAULT := true
 BOARD_SUPER_PARTITION_SIZE := 2621440000
 BOARD_SUPER_PARTITION_GROUPS := group_unisoc
@@ -140,7 +139,7 @@ TW_DEVICE_VERSION=$(shell date '+%Y%m%d') by Samurai
 # SPRD hardware
 BOARD_USES_SPRD_HARDWARE := true
 
-#SPRD: set property overrides split
+# SPRD: set property overrides split
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 BUILD_BROKEN_DUP_RULES := true
 
