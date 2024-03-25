@@ -1,8 +1,3 @@
-#
-# Copyright (C) 2023 The Android Open Source Project
-# Copyright (C) 2023 The TWRP Open Source Project
-#
-
 DEVICE_PATH := device/itel/L6006
 
 # Additional binaries & libraries needed for recovery
@@ -50,7 +45,7 @@ TW_INCLUDE_CRYPTO_FBE := true
 # Display
 TW_NO_SCREEN_TIMEOUT := true
 TW_MAX_BRIGHTNESS := 255
-TW_DEFAULT_BRIGHTNESS := 190
+TW_DEFAULT_BRIGHTNESS := 150
 TW_BRIGHTNESS_PATH := "/sys/devices/platform/sprd_backlight/backlight/sprd_backlight/brightness"
 
 # Excludes
