@@ -8,10 +8,10 @@ TARGET_RECOVERY_DEVICE_MODULES += \
     libashmemd_client
 
 TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
+    $(TARGET_OUT_SHARED_LIBRARIES)/ashmemd_aidl_interface-cpp.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libashmemd_client.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster4.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libpuresoftkeymasterdevice.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/ashmemd_aidl_interface-cpp.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libashmemd_client.so
 
 # Architecture
 ARCH_ARM_HAVE_TLS_REGISTER := true
@@ -77,18 +77,6 @@ BOARD_SUPER_PARTITION_GROUPS := group_unisoc
 BOARD_GROUP_UNISOC_SIZE := 2621440000
 BOARD_GROUP_UNISOC_PARTITION_LIST := system vendor product
 
-# Hack: prevent anti rollback
-#PLATFORM_VERSION := 16.1.0
-#PLATFORM_SECURITY_PATCH := 2099-12-31
-#VENDOR_SECURITY_PATCH := 2099-12-31
-
-PLATFORM_VERSION := 10
-PLATFORM_SECURITY_PATCH := 2020-12-05
-VENDOR_SECURITY_PATCH := 2020-12-05
-
-# Init
-TARGET_INIT_VENDOR_LIB := libinit_L6006
-TARGET_RECOVERY_DEVICE_MODULES := libinit_L6006
 
 # Kernel
 #BOARD_KERNEL_CMDLINE := earlycon=sprd_serial,0x70100000,115200n8 console=ttyS1,115200n8 loglevel=1 init=/init root=/dev/ram0 rw androidboot.selinux=permissive androidboot.hardware=sp9832e_1h10_go androidboot.dtbo_idx=0 printk.devkmsg=on androidboot.boot_devices=soc/soc:ap-ahb/20600000.sdio
@@ -143,6 +131,11 @@ TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 DEVICE_SCREEN_WIDTH := 720
 DEVICE_SCREEN_HEIGHT := 1560
 TW_THEME := portrait_hdpi
+
+# Security patch version
+PLATFORM_VERSION := 10
+PLATFORM_SECURITY_PATCH := 2020-12-05
+VENDOR_SECURITY_PATCH := 2020-12-05
 
 # Show build time on the splash screen
 TW_DEVICE_VERSION=$(shell date '+%Y%m%d') by Samurai
