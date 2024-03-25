@@ -91,13 +91,14 @@ TARGET_INIT_VENDOR_LIB := libinit_L6006
 TARGET_RECOVERY_DEVICE_MODULES := libinit_L6006
 
 # Kernel
-#BOARD_KERNEL_CMDLINE := earlycon=sprd_serial,0x70100000,115200n8 console=ttyS1,115200n8 loglevel=1 init=/init root=/dev/ram0 rw androidboot.hardware=sp9832e_1h10_go androidboot.dtbo_idx=0 printk.devkmsg=on androidboot.boot_devices=soc/soc:ap-ahb/20600000.sdio
+#BOARD_KERNEL_CMDLINE := earlycon=sprd_serial,0x70100000,115200n8 console=ttyS1,115200n8 loglevel=1 init=/init root=/dev/ram0 rw androidboot.selinux=permissive androidboot.hardware=sp9832e_1h10_go androidboot.dtbo_idx=0 printk.devkmsg=on androidboot.boot_devices=soc/soc:ap-ahb/20600000.sdio
 #BOARD_KERNEL_CMDLINE += earlycon=sprd_serial,0x70100000,115200n8
 #BOARD_KERNEL_CMDLINE += console=ttyS1,115200n8
 #BOARD_KERNEL_CMDLINE += loglevel=1
 #BOARD_KERNEL_CMDLINE += init=/init
 #BOARD_KERNEL_CMDLINE += root=/dev/ram0
 #BOARD_KERNEL_CMDLINE += rw
+#BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 #BOARD_KERNEL_CMDLINE += androidboot.hardware=sp9832e_1h10_go
 #BOARD_KERNEL_CMDLINE += androidboot.dtbo_idx=0
 #BOARD_KERNEL_CMDLINE += printk.devkmsg=on
@@ -139,9 +140,9 @@ RECOVERY_SDCARD_ON_DATA := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 
 # Resolution
-TW_THEME := portrait_hdpi
 DEVICE_SCREEN_WIDTH := 720
 DEVICE_SCREEN_HEIGHT := 1560
+TW_THEME := portrait_hdpi
 
 # Show build time on the splash screen
 TW_DEVICE_VERSION=$(shell date '+%Y%m%d') by sprd Team
