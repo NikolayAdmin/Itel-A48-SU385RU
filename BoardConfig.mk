@@ -138,6 +138,10 @@ BOARD_SUPPRESS_SECURE_ERASE := true
 # SPRD hardware
 BOARD_USES_SPRD_HARDWARE := true
 
+# Statusbar icons flags 720 x 1560
+TW_STATUS_ICONS_ALIGN := center
+TW_CUSTOM_CLOCK_POS := 300
+
 # TWRP Configuration
 TW_DEVICE_VERSION := Itel A48 by Samurai
 TW_EXCLUDE_DEFAULT_USB_INIT := true
