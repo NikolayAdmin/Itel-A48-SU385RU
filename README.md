@@ -15,9 +15,9 @@ Display | 720 x 1560 pixels
 Front Camera | 5 MP
 GPU     | Mali-T820
 Kernel | 4.14.133+
-Memory  | 2GB
+Memory  | 2 GB
 Rear Camera  | 5 MP
-Storage | 32GB
+Storage | 32 GB
 Weight | 178 g
 Wi-Fi | 2,4 GHz
 Year of release | 2020
