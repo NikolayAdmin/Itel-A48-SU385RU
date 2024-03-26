@@ -14,7 +14,7 @@ TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
-TARGET_CPU_VARIANT := generic
+TARGET_CPU_VARIANT := cortex-a53
 TARGET_CPU_SMP := true
 TARGET_USES_64_BIT_BINDER := true
 
@@ -138,9 +138,11 @@ BOARD_SUPPRESS_SECURE_ERASE := true
 # SPRD hardware
 BOARD_USES_SPRD_HARDWARE := true
 
-# Statusbar icons flags 720 x 1560
-TW_STATUS_ICONS_ALIGN := center
+# Statusbar icons flags
+#TW_CUSTOM_BATTERY_POS := 800
 TW_CUSTOM_CLOCK_POS := 300
+#TW_CUSTOM_CPU_POS := 50
+TW_STATUS_ICONS_ALIGN := center
 
 # TWRP Configuration
 TW_DEVICE_VERSION := Itel A48 by Samurai
