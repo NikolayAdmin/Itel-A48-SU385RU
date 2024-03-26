@@ -75,7 +75,7 @@ BOARD_GROUP_UNISOC_SIZE := 2621440000
 BOARD_GROUP_UNISOC_PARTITION_LIST := system vendor product
 
 # Fstab
-TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/prebuilt/recovery.fstab
+TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/recovery/root/system/etc/recovery.fstab
 
 # Hack: prevent anti rollback
 PLATFORM_SECURITY_PATCH := 2099-12-31
