@@ -35,6 +35,7 @@ TW_INCLUDE_FBE_METADATA_DECRYPT := false
 # Default configuration
 TW_DEFAULT_BRIGHTNESS := 150
 TW_DEFAULT_LANGUAGE := ru
+TW_MTP_DEVICE := /dev/mtp_usb
 
 # Display
 TW_BRIGHTNESS_PATH := "/sys/devices/platform/sprd_backlight/backlight/sprd_backlight/brightness"
