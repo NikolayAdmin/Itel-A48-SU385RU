@@ -74,9 +74,6 @@ BOARD_SUPER_PARTITION_GROUPS := group_unisoc
 BOARD_GROUP_UNISOC_SIZE := 2621440000
 BOARD_GROUP_UNISOC_PARTITION_LIST := system vendor product
 
-# Fstab
-TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/recovery/root/system/etc/recovery.fstab
-
 # Hack: prevent anti rollback
 PLATFORM_SECURITY_PATCH := 2099-12-31
 VENDOR_SECURITY_PATCH := 2099-12-31
@@ -119,6 +116,8 @@ TARGET_BOARD_PLATFORM := sp9832e
 TARGET_GPU_PLATFORM := midgard
 
 # Properties
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
+TARGET_RECOVERY_INITRC := $(DEVICE_PATH)/recovery/root/init.recovery.sp9832e_1h10_go.rc
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
 # Recovery
