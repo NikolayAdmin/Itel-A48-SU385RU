@@ -1,5 +1,4 @@
 ro.control_privapp_permissions=disable
-ro.hardware.keystore=sprdtrusty
 ro.product.hardware=sp9832e_1h10
 ro.treble.enabled=true
 sys.usb.config=mtp
