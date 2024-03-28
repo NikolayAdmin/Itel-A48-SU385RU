@@ -1,6 +1,5 @@
 ro.control_privapp_permissions=disable
-ro.product.hardware=sp9832e_1h10
+ro.product.hardware=sp9832e_1h10_go
 ro.sys.usb.storage.type=adb,mtp
 ro.treble.enabled=true
-sys.usb.config=mtp
 sys.usb.controller=musb-hdrc.0.auto
