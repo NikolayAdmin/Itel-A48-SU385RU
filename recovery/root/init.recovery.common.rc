@@ -89,9 +89,13 @@ on init
     export PATH /sbin:/system/bin:/vendor/bin
     export SECONDARY_STORAGE /storage/sdcard0
 
+    mkdir /acct/uid
     mkdir /storage
     mkdir /storage/sdcard1
     mkdir /storage/sdcard0
+
+    mount cgroup none /acct cpuacct
+
     symlink /storage/sdcard0 /mnt/sdcard
     symlink /system/etc/bluetooth /etc/bluetooth
 
