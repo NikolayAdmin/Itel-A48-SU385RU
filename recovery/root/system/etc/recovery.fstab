@@ -37,11 +37,11 @@
 system /system ext4 ro,barrier=1 wait,avb=vbmeta_system,logical,first_stage_mount
 vendor /vendor ext4 ro,barrier=1 wait,avb=vbmeta_vendor,logical,first_stage_mount
 product /product ext4 ro,barrier=1 wait,avb=vbmeta,logical,first_stage_mount
-/dev/block/platform/soc/soc:ap-ahb/20600000.sdio/by-name/userdata              /data               f2fs    noatime,nosuid,nodev,discard,inline_xattr,inline_data    wait,encryptable=footer,check
-/dev/block/platform/soc/soc:ap-ahb/20600000.sdio/by-name/cache                 /cache              ext4    noatime,nosuid,nodev,nomblk_io_submit,noauto_da_alloc    wait,check
-/dev/block/platform/soc/soc:ap-ahb/20600000.sdio/by-name/prodnv                /mnt/vendor         ext4    noatime,nosuid,nodev,nomblk_io_submit,noauto_da_alloc     wait,check
-/dev/block/platform/soc/soc:ap-ahb/20600000.sdio/by-name/socko                 /socko              ext4    noatime,nosuid,nodev,nomblk_io_submit,noauto_da_alloc    wait,check
-/dev/block/platform/soc/soc:ap-ahb/20600000.sdio/by-name/odmko                 /odmko              ext4    noatime,nosuid,nodev,nomblk_io_submit,noauto_da_alloc    wait,check
+/dev/block/platform/soc/soc:ap-ahb/20600000.sdio/by-name/userdata              /data               f2fs    noatime,nosuid,nodev,discard,inline_xattr,inline_data    wait,encryptable=footer
+/dev/block/platform/soc/soc:ap-ahb/20600000.sdio/by-name/cache                 /cache              ext4    noatime,nosuid,nodev,noauto_da_alloc    wait
+/dev/block/platform/soc/soc:ap-ahb/20600000.sdio/by-name/prodnv                /mnt/vendor         ext4    noatime,nosuid,nodev,noauto_da_alloc     wait
+/dev/block/platform/soc/soc:ap-ahb/20600000.sdio/by-name/socko                 /socko              ext4    noatime,nosuid,nodev,noauto_da_alloc    wait
+/dev/block/platform/soc/soc:ap-ahb/20600000.sdio/by-name/odmko                 /odmko              ext4    noatime,nosuid,nodev,noauto_da_alloc    wait
 
 
 /dev/block/platform/soc/soc:ap-ahb/20300000.sdio/mmcblk1p1                     /storage/sdcard0    vfat    defaults    defaults
