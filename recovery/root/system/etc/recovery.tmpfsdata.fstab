@@ -36,7 +36,7 @@
 
 /dev/block/platform/soc/soc:ap-ahb/20600000.sdio/by-name/system                /system_root        ext4    ro,barrier=1    wait
 /dev/block/platform/soc/soc:ap-ahb/20600000.sdio/by-name/vendor                /vendor             ext4    ro,barrier=1    wait
-/dev/block/platform/soc/soc:ap-ahb/20600000.sdio/by-name/cache                 /cache              ext4    noatime,nosuid,nodev,nomblk_io_submit,noauto_da_alloc    wait,check
-/dev/block/platform/soc/soc:ap-ahb/20600000.sdio/by-name/prodnv                /mnt/vendor         ext4    noatime,nosuid,nodev,nomblk_io_submit,noauto_da_alloc     wait,check
+/dev/block/platform/soc/soc:ap-ahb/20600000.sdio/by-name/cache                 /cache              ext4    noatime,nosuid,nodev,noauto_da_alloc    wait
+/dev/block/platform/soc/soc:ap-ahb/20600000.sdio/by-name/prodnv                /mnt/vendor         ext4    noatime,nosuid,nodev,noauto_da_alloc     wait
 
 /dev/block/platform/soc/soc:ap-ahb/20300000.sdio/mmcblk1p1                     /storage/sdcard0    vfat    defaults    defaults
