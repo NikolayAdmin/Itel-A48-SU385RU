@@ -1,5 +1,3 @@
-DEVICE_PATH := device/itel/L6006
-
 # AVB
 BOARD_AVB_ENABLE := true
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --set_hashtree_disabled_flag
@@ -33,6 +31,9 @@ TW_DEFAULT_BRIGHTNESS := 150
 TW_DEFAULT_LANGUAGE := ru
 TW_MTP_DEVICE := /dev/mtp_usb
 
+# Device path
+DEVICE_PATH := device/itel/L6006
+
 # Display
 TW_BRIGHTNESS_PATH := "/sys/devices/platform/sprd_backlight/backlight/sprd_backlight/brightness"
 TW_MAX_BRIGHTNESS := 255
@@ -54,7 +55,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
 # Fix reboot to system
-GENERIC_KERNEL_CMDLINE += twrpfastboot=1
+#GENERIC_KERNEL_CMDLINE += twrpfastboot=1
 TW_NO_FASTBOOT_BOOT := true
 
 # For building with minimal manifest
@@ -132,7 +133,7 @@ TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
 # Recovery
 BOARD_HAS_NO_SELECT_BUTTON := true
-RECOVERY_GRAPHICS_USE_LINELENGTH := true
+#RECOVERY_GRAPHICS_USE_LINELENGTH := true
 RECOVERY_SDCARD_ON_DATA := true
 TARGET_CPU_SMP := true
 #TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
@@ -145,6 +146,9 @@ TW_THEME := portrait_hdpi
 # SAR
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := false
 BOARD_SUPPRESS_SECURE_ERASE := true
+
+# SPRD hardware
+BOARD_USES_SPRD_HARDWARE := true
 
 # Statusbar icons flags
 #TW_CUSTOM_BATTERY_POS := 800
