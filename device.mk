@@ -1,14 +1,17 @@
-LOCAL_PATH := device/itel/L6006
-
-PRODUCT_PLATFORM := sp9832e
+# APEX
+PRODUCT_PROPERTY_OVERRIDES += ro.apex.updatable=false
 
 # API
 PRODUCT_SHIPPING_API_LEVEL := 29
 
+# Device path
+LOCAL_PATH := device/itel/L6006
+
 # Dynamic Partitions stuff
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# Platform
+PRODUCT_PLATFORM := sp9832e
+
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := 29
-
-PRODUCT_PROPERTY_OVERRIDES += ro.apex.updatable=false
