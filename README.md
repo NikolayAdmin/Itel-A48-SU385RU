@@ -8,8 +8,7 @@ Android Version | 10.0
 Battery | 3000 mAh
 Bluetooth | 4.2
 Chipset | Unisoc SC9832e
-CPU     | Quad-core 1.4 GHz
-CPU Configuration | Cortex-A53
+CPU     | 4x Cortex-A53; 1.4 GHz
 Dimensions | 156 x 77.8 x 9.46 mm
 Display | 720 x 1560 pixels
 Front Camera | 5 MP
