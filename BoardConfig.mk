@@ -158,7 +158,7 @@ TW_USE_TOOLBOX := true
 TARGET_USES_MKE2FS := true
 
 # Vendor modules loading
-TW_LOAD_VENDOR_MODULES := "mali.ko sprd_sensor.ko sunwave_sw9058g_fp.ko tlsc6x_ts.ko"
+TW_LOAD_VENDOR_MODULES := "tlsc6x_ts.ko"
 
 # Workaround for error copying vendor files to recovery ramdisk
 TARGET_COPY_OUT_VENDOR := vendor
