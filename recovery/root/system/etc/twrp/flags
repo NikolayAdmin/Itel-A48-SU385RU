@@ -45,6 +45,3 @@
 /cache              ext4      /dev/block/platform/soc/soc:ap-ahb/20600000.sdio/by-name/cache        flags=display="Cache";
 /mnt/vendor            ext4      /dev/block/platform/soc/soc:ap-ahb/20600000.sdio/by-name/prodnv       flags=display="prodnv";backup=1;
 /mnt/vendor_image       emmc      /dev/block/platform/soc/soc:ap-ahb/20600000.sdio/by-name/prodnv       flags=display="prodnv_image";backup=1;flashimg=1;
-/UDC_config         emmc      /dev/block/platform/soc/soc:ap-ahb/20600000.sdio/by-name/UDC_config   flags=display="Udc_config";
-
-/storage/sdcard0           vfat      /dev/block/platform/soc/soc:ap-ahb/20300000.sdio/mmcblk1p1            flags=display="Sdcard0";
