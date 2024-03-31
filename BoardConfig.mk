@@ -1,5 +1,4 @@
 # Architecture
-ARCH_ARM_HAVE_TLS_REGISTER := true
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_ABI := armeabi-v7a
