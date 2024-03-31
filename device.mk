@@ -30,3 +30,13 @@ PRODUCT_PLATFORM := sp9832e
 
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := 29
+
+PRODUCT_PACKAGES_DEBUG += \
+    update_engine_client
+
+PRODUCT_PACKAGES += \
+    otapreopt_script \
+    cppreopts.sh \
+    update_engine \
+    update_verifier \
+    update_engine_sideload
