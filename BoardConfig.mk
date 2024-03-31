@@ -53,10 +53,6 @@ BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
-# Fix reboot to system
-#GENERIC_KERNEL_CMDLINE += twrpfastboot=1
-TW_NO_FASTBOOT_BOOT := true
-
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
 BUILD_BROKEN_DUP_RULES := true
