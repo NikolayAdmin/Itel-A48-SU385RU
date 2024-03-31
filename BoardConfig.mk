@@ -36,15 +36,14 @@ TW_NO_SCREEN_TIMEOUT := true
 # Dynamic partitions
 AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS += \
-    vbmeta \
-    vbmeta_system \
-    vbmeta_vendor \
-    dtbo \
-    boot \
-    system \
-    system_ext \
-    vendor \
-    product
+vbmeta \
+vbmeta_system \
+vbmeta_vendor \
+dtbo \
+boot \
+system \
+vendor \
+product
 
 # Enable CPUSets
 ENABLE_CPUSETS := true
