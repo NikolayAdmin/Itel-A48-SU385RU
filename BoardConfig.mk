@@ -114,7 +114,6 @@ TARGET_GPU_PLATFORM := midgard
 
 # Properties
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
-TARGET_RECOVERY_INITRC := $(DEVICE_PATH)/recovery/root/init.recovery.sp9832e_1h10_go.rc
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
 # Resolution
