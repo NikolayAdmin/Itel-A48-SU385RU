@@ -45,3 +45,7 @@
 /cache              ext4      /dev/block/platform/soc/soc:ap-ahb/20600000.sdio/by-name/cache        flags=display="Cache";
 /mnt/vendor            ext4      /dev/block/platform/soc/soc:ap-ahb/20600000.sdio/by-name/prodnv       flags=display="prodnv";backup=1;
 /mnt/vendor_image       emmc      /dev/block/platform/soc/soc:ap-ahb/20600000.sdio/by-name/prodnv       flags=display="prodnv_image";backup=1;flashimg=1;
+
+# Removable storage
+/external_sd     auto      /dev/block/mmcblk1p1         /dev/block/mmcblk1
+/usb-otg         auto      /dev/block/sda1              /dev/block/sda        flags=storage;removable;wipeingui
