@@ -1,6 +1,3 @@
-# APEX
-PRODUCT_PROPERTY_OVERRIDES += ro.apex.updatable=false
-
 # API
 PRODUCT_SHIPPING_API_LEVEL := 29
 
