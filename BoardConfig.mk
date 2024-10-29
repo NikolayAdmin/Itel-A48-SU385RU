@@ -122,7 +122,7 @@ TW_MTP_DEVICE := /dev/mtp_usb
 # Platform
 TARGET_BOARD := s9832e1h10_go_32b
 TARGET_BOARD_PLATFORM := sp9832e
-TARGET_GPU_PLATFORM := midgard
+TARGET_BOARD_PLATFORM_GPU := mali-t820
 
 # Properties
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
@@ -139,6 +139,12 @@ BOARD_SUPPRESS_SECURE_ERASE := true
 
 # SPRD hardware
 BOARD_USES_SPRD_HARDWARE := true
+
+# Storage
+TW_INTERNAL_STORAGE_PATH := "/data/media"
+TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
+TW_EXTERNAL_STORAGE_PATH := "/external_sd"
+TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
 
 # TWRP Configuration
 BOARD_HAS_NO_SELECT_BUTTON := true
