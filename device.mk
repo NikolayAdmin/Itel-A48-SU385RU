@@ -9,7 +9,7 @@ AB_OTA_POSTINSTALL_CONFIG += \
 PRODUCT_SHIPPING_API_LEVEL := 29
 
 # Device path
-LOCAL_PATH := device/itel/L6006
+LOCAL_PATH := device/Itel/SU385RU
 
 # Dynamic Partitions stuff
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
