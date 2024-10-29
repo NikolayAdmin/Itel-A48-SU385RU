@@ -27,9 +27,6 @@ TW_INCLUDE_FBE_METADATA_DECRYPT := false
 # Device path
 DEVICE_PATH := device/Itel/SU385RU
 
-# Device version 
-TW_DEVICE_VERSION=$(shell date '+%Y%m%d') for Itel A48
-
 # Display
 TW_BRIGHTNESS_PATH := "/sys/devices/platform/sprd_backlight/backlight/sprd_backlight/brightness"
 TW_DEFAULT_BRIGHTNESS := 150
@@ -79,6 +76,9 @@ BOARD_GROUP_UNISOC_SIZE := 2621440000
 BOARD_SUPER_PARTITION_GROUPS := group_unisoc
 BOARD_SUPER_PARTITION_SIZE := 2621440000
 
+# Fstab
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
+
 # Hack: prevent anti rollback
 PLATFORM_SECURITY_PATCH := 2099-12-31
 PLATFORM_VERSION := 16.1.0
@@ -124,21 +124,16 @@ TARGET_BOARD := s9832e1h10_go_32b
 TARGET_BOARD_PLATFORM := sp9832e
 TARGET_BOARD_PLATFORM_GPU := mali-t820
 
-# Properties
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
-TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
-
 # Resolution
 DEVICE_SCREEN_WIDTH := 720
 DEVICE_SCREEN_HEIGHT := 1560
-TW_THEME := portrait_hdpi
 
-# SAR
+# Show build time on the splash screen
+TW_DEVICE_VERSION=$(shell date '+%Y%m%d')
+
+# System as Root
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := false
 BOARD_SUPPRESS_SECURE_ERASE := true
-
-# SPRD hardware
-BOARD_USES_SPRD_HARDWARE := true
 
 # System.prop
 TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
@@ -153,7 +148,7 @@ TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
 BOARD_HAS_NO_SELECT_BUTTON := true
 RECOVERY_SDCARD_ON_DATA := true
 TARGET_CPU_SMP := true
-TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
+TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 TW_DEFAULT_LANGUAGE := ru
 TW_EXCLUDE_APEX := true
 TW_EXCLUDE_DEFAULT_USB_INIT := true
@@ -165,6 +160,7 @@ TW_INCLUDE_REPACKTOOLS := true
 TW_INCLUDE_RESETPROP := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_NO_SCREEN_BLANK := true
+TW_THEME := portrait_hdpi
 TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
 TW_USE_TOOLBOX := true
 
