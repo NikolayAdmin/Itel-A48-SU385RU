@@ -9,7 +9,6 @@ TARGET_USES_64_BIT_BINDER := true
 
 # AVB
 BOARD_AVB_ENABLE := true
-BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
 BOARD_AVB_RECOVERY_ALGORITHM := SHA256_RSA4096
 BOARD_AVB_RECOVERY_KEY_PATH := external/avb/test/data/testkey_rsa4096.pem
 BOARD_AVB_RECOVERY_ROLLBACK_INDEX := 1
@@ -31,7 +30,6 @@ DEVICE_PATH := device/Itel/SU385RU
 TW_BRIGHTNESS_PATH := "/sys/devices/platform/sprd_backlight/backlight/sprd_backlight/brightness"
 TW_DEFAULT_BRIGHTNESS := 150
 TW_MAX_BRIGHTNESS := 255
-TW_NO_SCREEN_TIMEOUT := true
 
 # Enable CPUSets
 ENABLE_CPUSETS := true
@@ -107,18 +105,21 @@ DEVICE_SCREEN_HEIGHT := 1560
 # Show build time on the splash screen
 TW_DEVICE_VERSION=$(shell date '+%Y%m%d')
 
+# SPRD hardware
+BOARD_USES_SPRD_HARDWARE := true
+
+# Storage
+TW_EXTERNAL_STORAGE_PATH := "/external_sd"
+TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
+TW_INTERNAL_STORAGE_PATH := "/data/media"
+TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
+
 # System as Root
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := false
 BOARD_SUPPRESS_SECURE_ERASE := true
 
 # System.prop
 TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
-
-# Storage
-TW_INTERNAL_STORAGE_PATH := "/data/media"
-TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
-TW_EXTERNAL_STORAGE_PATH := "/external_sd"
-TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
 
 # TWRP Configuration
 BOARD_HAS_NO_SELECT_BUTTON := true
@@ -137,6 +138,7 @@ TW_INCLUDE_REPACKTOOLS := true
 TW_INCLUDE_RESETPROP := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_NO_SCREEN_BLANK := true
+TW_NO_SCREEN_TIMEOUT := true
 TW_THEME := portrait_hdpi
 TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
 TW_USE_TOOLBOX := true
