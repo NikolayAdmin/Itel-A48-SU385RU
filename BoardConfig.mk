@@ -27,6 +27,9 @@ TW_INCLUDE_FBE_METADATA_DECRYPT := false
 # Device path
 DEVICE_PATH := device/itel/L6006
 
+# Device version 
+TW_DEVICE_VERSION=$(shell date '+%Y%m%d') for Itel A48
+
 # Display
 TW_BRIGHTNESS_PATH := "/sys/devices/platform/sprd_backlight/backlight/sprd_backlight/brightness"
 TW_DEFAULT_BRIGHTNESS := 150
@@ -109,9 +112,6 @@ BOARD_MKBOOTIMG_ARGS += --ramdisk_offset $(BOARD_RAMDISK_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --second_offset $(BOARD_KERNEL_SECOND_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
 
-TARGET_KERNEL_ARCH := arm
-TARGET_KERNEL_HEADER_ARCH := arm
-
 # Metadata
 BOARD_ROOT_EXTRA_FOLDERS += metadata
 BOARD_USES_METADATA_PARTITION := true
@@ -140,6 +140,9 @@ BOARD_SUPPRESS_SECURE_ERASE := true
 # SPRD hardware
 BOARD_USES_SPRD_HARDWARE := true
 
+# System.prop
+TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
+
 # Storage
 TW_INTERNAL_STORAGE_PATH := "/data/media"
 TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
@@ -152,7 +155,6 @@ RECOVERY_SDCARD_ON_DATA := true
 TARGET_CPU_SMP := true
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 TW_DEFAULT_LANGUAGE := ru
-TW_DEVICE_VERSION := Itel A48 (L6006)
 TW_EXCLUDE_APEX := true
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 TW_EXCLUDE_TWRPAPP := true
