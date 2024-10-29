@@ -33,18 +33,6 @@ TW_DEFAULT_BRIGHTNESS := 150
 TW_MAX_BRIGHTNESS := 255
 TW_NO_SCREEN_TIMEOUT := true
 
-# Dynamic partitions
-AB_OTA_UPDATER := true
-AB_OTA_PARTITIONS += \
-vbmeta \
-vbmeta_system \
-vbmeta_vendor \
-dtbo \
-boot \
-system \
-vendor \
-product
-
 # Enable CPUSets
 ENABLE_CPUSETS := true
 ENABLE_SCHEDBOOST := true
@@ -64,17 +52,6 @@ TARGET_USERIMAGES_USE_F2FS := true
 ALLOW_MISSING_DEPENDENCIES := true
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
-
-# For debugging
-TARGET_USES_LOGD := true
-TWRP_INCLUDE_LOGCAT := true
-
-# For dynamic partitions feature
-BOARD_BUILD_SUPER_IMAGE_BY_DEFAULT := true
-BOARD_GROUP_UNISOC_PARTITION_LIST := system vendor product
-BOARD_GROUP_UNISOC_SIZE := 2621440000
-BOARD_SUPER_PARTITION_GROUPS := group_unisoc
-BOARD_SUPER_PARTITION_SIZE := 2621440000
 
 # Fstab
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
@@ -120,7 +97,6 @@ BOARD_USES_METADATA_PARTITION := true
 TW_MTP_DEVICE := /dev/mtp_usb
 
 # Platform
-TARGET_BOARD := s9832e1h10_go_32b
 TARGET_BOARD_PLATFORM := sp9832e
 TARGET_BOARD_PLATFORM_GPU := mali-t820
 
@@ -149,6 +125,7 @@ BOARD_HAS_NO_SELECT_BUTTON := true
 RECOVERY_SDCARD_ON_DATA := true
 TARGET_CPU_SMP := true
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
+TARGET_USES_LOGD := true
 TW_DEFAULT_LANGUAGE := ru
 TW_EXCLUDE_APEX := true
 TW_EXCLUDE_DEFAULT_USB_INIT := true
@@ -163,6 +140,7 @@ TW_NO_SCREEN_BLANK := true
 TW_THEME := portrait_hdpi
 TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
 TW_USE_TOOLBOX := true
+TWRP_INCLUDE_LOGCAT := true
 
 # Use mke2fs to create ext4 images
 TARGET_USES_MKE2FS := true
