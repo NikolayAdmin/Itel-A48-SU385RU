@@ -25,7 +25,7 @@ TW_INCLUDE_CRYPTO_FBE := false
 TW_INCLUDE_FBE_METADATA_DECRYPT := false
 
 # Device path
-DEVICE_PATH := device/itel/L6006
+DEVICE_PATH := device/Itel/SU385RU
 
 # Device version 
 TW_DEVICE_VERSION=$(shell date '+%Y%m%d') for Itel A48
