@@ -1,4 +1,4 @@
 PRODUCT_MAKEFILES := \
-     $(LOCAL_DIR)/twrp_L6006.mk
+     $(LOCAL_DIR)/twrp_SU385RU.mk
 
-COMMON_LUNCH_CHOICES := twrp_L6006-eng
+COMMON_LUNCH_CHOICES := twrp_SU385RU-eng
