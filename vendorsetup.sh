@@ -1,1 +1,1 @@
-add_lunch_combo twrp_SU385RU-eng
+add_lunch_combo twrp_itel-L6006-eng
