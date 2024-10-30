@@ -1,5 +1,5 @@
-# Inherit from L6006 device
-$(call inherit-product, device/Itel/SU385RU/device.mk)
+# Inherit from itel-L6006 device
+$(call inherit-product, device/Itel/itel-L6006/device.mk)
 
 # Inherit from those products. Most specific first
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
