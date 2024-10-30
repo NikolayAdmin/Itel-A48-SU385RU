@@ -11,8 +11,8 @@ $(call inherit-product, vendor/twrp/config/common.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 
 # Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := SU385RU
-PRODUCT_NAME := twrp_SU385RU
+PRODUCT_DEVICE := itel-L6006
+PRODUCT_NAME := twrp_itel-L6006
 PRODUCT_BRAND := Itel
 PRODUCT_MODEL := itel L6006
 PRODUCT_MANUFACTURER := ITEL MOBILE LIMITED
