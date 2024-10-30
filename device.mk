@@ -2,7 +2,7 @@
 PRODUCT_SHIPPING_API_LEVEL := 29
 
 # Device path
-LOCAL_PATH := device/Itel/SU385RU
+LOCAL_PATH := device/Itel/itel-L6006
 
 # Dynamic Partitions stuff
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
