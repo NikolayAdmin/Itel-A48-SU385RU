@@ -1,5 +1,4 @@
 ro.adb.secure=0
-ro.control_privapp_permissions=disable
 ro.debuggable=1
 ro.product.hardware=sp9832e_1h10_go
 ro.secure=1
