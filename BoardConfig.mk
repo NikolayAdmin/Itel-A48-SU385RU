@@ -24,7 +24,7 @@ TW_INCLUDE_CRYPTO_FBE := false
 TW_INCLUDE_FBE_METADATA_DECRYPT := false
 
 # Device path
-DEVICE_PATH := device/Itel/SU385RU
+DEVICE_PATH := device/Itel/itel-L6006
 
 # Display
 TW_BRIGHTNESS_PATH := "/sys/devices/platform/sprd_backlight/backlight/sprd_backlight/brightness"
@@ -54,10 +54,13 @@ BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 # Fstab
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
 
+# Init.rc
+TARGET_RECOVERY_INITRC := $(DEVICE_PATH)/recovery/root/init.recovery.sp9832e_1h10_go.rc
+
 # Hack: prevent anti rollback
-PLATFORM_SECURITY_PATCH := 2099-12-31
-PLATFORM_VERSION := 16.1.0
-VENDOR_SECURITY_PATCH := 2099-12-31
+PLATFORM_SECURITY_PATCH := 2020-12-05
+PLATFORM_VERSION := 10
+VENDOR_SECURITY_PATCH := 2020-12-05
 
 # Kernel
 BOARD_BOOTIMG_HEADER_VERSION := 2
@@ -92,6 +95,7 @@ BOARD_ROOT_EXTRA_FOLDERS += metadata
 BOARD_USES_METADATA_PARTITION := true
 
 # MTP
+TW_HAS_MTP := true
 TW_MTP_DEVICE := /dev/mtp_usb
 
 # Platform
@@ -111,7 +115,7 @@ BOARD_USES_SPRD_HARDWARE := true
 # Storage
 TW_EXTERNAL_STORAGE_PATH := "/external_sd"
 TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
-TW_INTERNAL_STORAGE_PATH := "/data/media"
+TW_INTERNAL_STORAGE_PATH := "/data/media/0"
 TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
 
 # System as Root
