@@ -1,5 +1,5 @@
 # API
-PRODUCT_SHIPPING_API_LEVEL := 29
+PRODUCT_SHIPPING_API_LEVEL := 30
 
 # Device path
 LOCAL_PATH := device/Itel/itel-L6006
