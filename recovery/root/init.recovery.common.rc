@@ -1,7 +1,3 @@
-#
-## Please include it in /init.recovery.${ro.hardware}.rc
-#
-
 service healthd /system/bin/healthd -r
     critical
     seclabel u:r:healthd:s0
@@ -451,4 +447,3 @@ on property:ro.bootmode=factorytest
    start mxc400xd
 on property:ro.bootmode=factorytest && property:ro.debuggable=0
     setprop sys.usb.config vser
-
