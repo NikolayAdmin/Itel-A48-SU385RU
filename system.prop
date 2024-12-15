@@ -1,7 +1,7 @@
 ro.adb.secure=0
 ro.debuggable=1
 ro.product.hardware=sp9832e_1h10_go
-ro.secure=1
+ro.secure=0
 ro.treble.enabled=true
 sys.usb.config=adb,mtp
 sys.usb.controller=musb-hdrc.0.auto
